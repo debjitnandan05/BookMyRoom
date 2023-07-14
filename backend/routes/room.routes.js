@@ -1,0 +1,13 @@
+import express from "express";
+import { addRoom, deleteRoom, getAllRoom, getRoomById, updateRoom } from "../controllers/room.controller";
+
+const roomRouter = express.Router();
+
+roomRouter.post('/:id',addRoom);
+roomRouter.get('/',getAllRoom);
+roomRouter.get('/:id',getRoomById);
+roomRouter.put('/:id',updateRoom);
+roomRouter.delete('/:id/:hotelId',deleteRoom);
+
+
+export default roomRouter;

@@ -4,6 +4,8 @@ import mongoose from 'mongoose';
 import userRouter from './routes/user.routes';
 import authRouter from './routes/auth.routes';
 import hotelRouter from './routes/hotel.routes';
+import roomRouter from './routes/room.routes';
+
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,6 +25,7 @@ mongoose.connect(dburl)
 app.use('/api/user',userRouter);
 app.use('/api/auth',authRouter);
 app.use('/api/hotel',hotelRouter);
+app.use('/api/room',roomRouter)
 
 // for handel error
 app.use((err, req, res, next) => {
