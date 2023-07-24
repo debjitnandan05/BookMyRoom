@@ -23,18 +23,35 @@ export const updateHotel = async (req,res,next)=>{
 
 // get all hotel
 export const getAllHotel = async (req,res,next)=>{
+
+    const {min,max, ...other} = req.query;
     try {
-        const hotel = await Hotel.find();
-        if(!hotel){
+        const hotels =await Hotel.find({...other, cheapestPrice: { $gt: min | 100, $lt: max || 999999 }});
+        if(!hotels){
             return res.status(404).json({message : "No hotel found"});
         }
         else{
-            return res.status(200).json(hotel);
+            return res.status(200).json(hotels);
         }
     } catch (error) {
         return console.log(error);            
     }
 }
+
+// get all hotel in a city
+export const countByCity = async (req, res, next) => {
+    const cities = req.query.cities.split(",");  // take the string and make a array of cities
+    try {
+      const list = await Promise.all(
+        cities.map((city) => {
+          return Hotel.countDocuments({ city: city });
+        })
+      );
+      res.status(200).json(list);
+    } catch (err) {
+      next(err);
+    }
+  };
 
 // get hotel by id
 export const getHotelById = async (req,res,next)=>{

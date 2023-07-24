@@ -5,11 +5,13 @@ import userRouter from './routes/user.routes';
 import authRouter from './routes/auth.routes';
 import hotelRouter from './routes/hotel.routes';
 import roomRouter from './routes/room.routes';
+import cors from 'cors';
 
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
+app.use(cors());
 app.use(express.urlencoded({extended : true})); 
 app.use(express.json());
 
@@ -24,7 +26,7 @@ mongoose.connect(dburl)
 
 app.use('/api/user',userRouter);
 app.use('/api/auth',authRouter);
-app.use('/api/hotel',hotelRouter);
+app.use('/api/hotels',hotelRouter);
 app.use('/api/room',roomRouter)
 
 // for handel error
