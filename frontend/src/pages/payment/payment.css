@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+.paymentpage{  
+  display: flex;
+  justify-content: center;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.customerDetails{
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;  
+  margin: 30px;
+  padding: 20px;
+  width: 50%;
+  background: linear-gradient(68.7deg, rgb(29, 173, 235) 13.2%, rgb(137, 149, 250) 29.8%, rgb(229, 109, 212) 48.9%, rgb(255, 68, 128) 68.2%, rgb(255, 94, 0) 86.4%);
+}
+
+
+.bookingDetails{
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;  
+  margin: 30px;
+  padding: 20px;
+  width: 50%;
+  background: linear-gradient(68.7deg, rgb(29, 173, 235) 13.2%, rgb(137, 149, 250) 29.8%, rgb(229, 109, 212) 48.9%, rgb(255, 68, 128) 68.2%, rgb(255, 94, 0) 86.4%);
+}
+
+button{
+ background-color: rgba(94, 94, 94, 0.472);
+ color: white;
+ padding: 10px;
+ font-weight: bold;
+border-radius: 5px;
+cursor: pointer;
+
+
+}
+
+h1{
+  text-align: center;
+  color: white;
+}

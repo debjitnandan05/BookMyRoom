@@ -37,11 +37,11 @@ const HotelList = () => {
           <h1 className="lsTitle">Search</h1>
           <div className="lsItem">
             <label>Destination</label>
-            <input placeholder={destination} type="text" />
+            <input className='searchInput' placeholder={destination} type="text" />
           </div>
           <div className="lsItem">
             <label>Check-in Date</label>
-            <span onClick={() => setOpenDate(!openDate)}>{`${format(
+            <span className='searchInput' onClick={() => setOpenDate(!openDate)}>{`${format(
               date[0].startDate,
               "dd/MM/yyyy"
             )} to ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>
@@ -58,32 +58,23 @@ const HotelList = () => {
             <div className="lsOptions">
               <div className="lsOptionItem">
                 <span className="lsOptionText">
-                  Min price <small>per night</small>
+                  Min price :
                 </span>
                 <input type="number" className="lsOptionInput" onChange={(e)=>{setMinPrice(e.target.value)}} />
               </div>
               <div className="lsOptionItem">
                 <span className="lsOptionText">
-                  Max price <small>per night</small>
+                  Max price :
                 </span>
                 <input type="number" className="lsOptionInput" onChange={(e)=>{setMaxPrice(e.target.value)}} />
               </div>
               <div className="lsOptionItem">
-                <span className="lsOptionText">Adult</span>
+                <span className="lsOptionText">Guest</span>
                 <input
                   type="number"
                   min={1}
                   className="lsOptionInput"
                   placeholder={options.adult}
-                />
-              </div>
-              <div className="lsOptionItem">
-                <span className="lsOptionText">Children</span>
-                <input
-                  type="number"
-                  min={0}
-                  className="lsOptionInput"
-                  placeholder={options.children}
                 />
               </div>
               <div className="lsOptionItem">

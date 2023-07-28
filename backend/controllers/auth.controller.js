@@ -48,7 +48,15 @@ export const signup = async(req,res,next)=>{
                  res.status(400).json({message : "Incorrect Password"})
              }
              else{
-                 res.status(200).json({message : "You are logged in"});
+
+                const {password,...userDetails} = existingUser._doc;
+                 res.status(200).
+                 json(
+                    {
+                        message : "You are logged in",
+                        details : {...userDetails}
+                    }
+                    );
              }
          }
      } catch (error) {

@@ -1,33 +1,26 @@
 import express from 'express';
-import dotenv from "dotenv";
-import mongoose from 'mongoose';
 import userRouter from './routes/user.routes';
 import authRouter from './routes/auth.routes';
 import hotelRouter from './routes/hotel.routes';
 import roomRouter from './routes/room.routes';
 import cors from 'cors';
+import paymentRouter from './routes/payment.routes.js';
 
-dotenv.config();
-const app = express();
-const PORT = process.env.PORT || 5000;
+export const app = express();
+
 
 app.use(cors());
 app.use(express.urlencoded({extended : true})); 
 app.use(express.json());
 
-// database add
-const dburl = process.env.DB_URL;
- 
-mongoose.connect(dburl)  
-.then(
-    ()=>{console.log('DB is conneted')}
-)
-.catch((err)=>console.log(err))
+
 
 app.use('/api/user',userRouter);
 app.use('/api/auth',authRouter);
 app.use('/api/hotels',hotelRouter);
 app.use('/api/room',roomRouter)
+app.use('/api/payment',paymentRouter)
+
 
 // for handel error
 app.use((err, req, res, next) => {
@@ -41,6 +34,3 @@ app.use((err, req, res, next) => {
     });
   });
 
-app.listen(PORT,()=>{
-    console.log(`Your app is listen on port ${PORT}`);
-})

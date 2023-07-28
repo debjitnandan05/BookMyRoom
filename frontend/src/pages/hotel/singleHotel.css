@@ -19,12 +19,12 @@
     top: 10px;
     right: 0;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 7px;
     background-color: #164516;
     color: white;
     font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
+    border: none;
+    border-radius: 5px;    
   }
   
   .hotelTitle {
@@ -58,7 +58,7 @@
   }
   
   .hotelImgWrapper {
-    width: 33%;
+    width: 49%;
   }
   
   .hotelImg {
@@ -85,7 +85,7 @@
   
   .hotelDetailsPrice {
     flex: 1;
-    background-color: #fff98e;
+    background-image: linear-gradient(180deg, #009FFD, #20BF55);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@
   
   .hotelDetailsPrice > h1 {
     font-size: 18px;
-    color: #555;
+    color: white;
   }
   .hotelDetailsPrice > span {
     font-size: 14px;
@@ -105,7 +105,7 @@
   .hotelDetailsPrice > button {
     border: none;
     padding: 10px 20px;
-    background-color: #164516;
+    background-color:rgba(0, 0, 0, 0.5);
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -158,7 +158,7 @@
     justify-content: inherit;
   }
   .siRating>button{
-   background-color: #003580;
+    background-image: linear-gradient(180deg, #182B3A, #0f436b);
    color: white;
    padding: 5px;
    font-weight: bold;

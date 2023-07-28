@@ -1,4 +1,5 @@
 import Hotel from "../models/hotel.model";
+import Room from "../models/room.model";
 
 // add hotel
 export const addHotel = async (req,res,next)=>{
@@ -76,7 +77,31 @@ export const deleteHotel = async (req,res,next)=>{
     } catch (error) {
         return console.log(error)
     }
-}       
+}
+
+// get all rooms of a hotel
+export const getHotelRooms = async (req,res,next)=>{
+    try {
+
+        const hotel = await Hotel.findById(req.params.id);
+    const roomList = await Promise.all(
+        hotel.rooms.map(
+            (room)=>{
+                return Room.findById(room);
+            })
+    );
+  
+    if(roomList.length === 0){
+        return res.status(404).json({message : "No Rooms found"});
+    }
+    else{
+        return res.status(200).json(roomList);
+    }   
+        
+    } catch (error) {
+      return console.log(error)  
+    }    
+}
 
 
 

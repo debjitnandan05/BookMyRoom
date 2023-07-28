@@ -1,7 +1,10 @@
 .mail{
     width: 100%;
     margin-top: 50px;
-    background-color: #164516;
+    background-image: url("https://c1.wallpaperflare.com/preview/25/443/656/urban-abstract-city-night.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     color: white;
     display: flex;
     flex-direction: column;
@@ -17,14 +20,21 @@
     border: none;
     margin-right: 10px;
     border-radius: 5px;
+    background: rgba(13, 9, 9, 0.33);
+    overflow: hidden;
+    border: 1px solid rgba(38, 38, 38, 0.7);
+    backdrop-filter: blur(2.5px);
   }
   
   .mailInputContainer>button{
     height: 50px;
-    background-color: #ffc300;
+    background: rgba(3, 3, 3, 0.6);
+    overflow: hidden;
+    border: 1px solid rgba(38, 38, 38, 0.7);
+    backdrop-filter: blur(2.5px);
     color: white;
     font-weight: 500;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
   }

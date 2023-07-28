@@ -32,6 +32,7 @@ export const SearchContextProvider = ({ children }) => {
         city: state.city,
         date: state.date,
         options: state.options,
+        state,
         dispatch,
       }}
     >

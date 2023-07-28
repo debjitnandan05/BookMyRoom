@@ -8,6 +8,10 @@ import KolkataHotels from "./components/featured/listCity/KolkataHotels";
 import MumbaiHotels from "./components/featured/listCity/MumbaiHotels";
 import JaipurHotels from "./components/featured/listCity/JaipurHotels";
 import ChennaiHotels from "./components/featured/listCity/ChennaiHotels";
+import Login from "./pages/login/Login";
+import SignUp from "./pages/signup/SignUp";
+import Payment from "./pages/payment/Payment";
+
 
 
 
@@ -18,6 +22,10 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/hotels" element={<HotelList/>}/>
       <Route path="/hotels/:id" element={<SingleHotel/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/register" element={<SignUp/>}/>
+      <Route path="/payment" element={<Payment/>}/>
+
 
       <Route path="/hotels/Agra" element={<AgraHotels/>}/>
       <Route path="/hotels/Delhi" element={<DelhiHotels/>}/>

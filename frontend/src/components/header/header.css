@@ -1,5 +1,10 @@
 .header {
-    background-color: #164516;
+    /* background-image: url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80"); */
+    
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/images6/Free-download-4K-Travel-Wallpaper-HD.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     color: white;
     display: flex;
     justify-content: center;
@@ -39,8 +44,9 @@
   }
   
   .headerBtn {
-    background-color: #ffc300;
-    color: #193919;
+    
+    background-color: rgba(0,0,0,0.45);
+    color: white;
     font-weight: bolder;
     border: none;
     border-radius: 20px;
@@ -49,8 +55,8 @@
   }
 
   .searchBtn{
-    background-color: #164516;
-    color: #ffc300;
+    background-image: linear-gradient(180deg, #182B3A, #0f436b);
+    color:white;
     font-weight: 550;
     border: none;
     border-radius: 20px;
@@ -63,7 +69,7 @@
   .headerSearch {
     height: 30px;
     background-color: white;
-    border: 3px solid #ffc300;
+    border: 3px solid #71b0cb;
     display: flex;
     align-items: center;
     justify-content: space-around;

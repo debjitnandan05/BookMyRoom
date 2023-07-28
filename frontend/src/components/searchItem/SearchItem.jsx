@@ -17,10 +17,6 @@ const SearchItem = ({item}) => {
           {/* Entire studio • 1 bathroom • 21m² 1 full bed */}
           {item.desc}
         </span>
-        <span className="siCancelOp">Free cancellation </span>
-        <span className="siCancelOpSubtitle">
-          You can cancel later, so lock in this great price today!
-        </span>
       </div>
       <div className="siDetails">
         <div className="siRating">
