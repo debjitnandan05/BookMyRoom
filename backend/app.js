@@ -1,8 +1,9 @@
 import express from 'express';
-import userRouter from './routes/user.routes';
-import authRouter from './routes/auth.routes';
-import hotelRouter from './routes/hotel.routes';
-import roomRouter from './routes/room.routes';
+
+import authRouter from './routes/auth.routes.js';
+import hotelRouter from './routes/hotel.routes.js';
+import roomRouter from './routes/room.routes.js';
+import userRouter from './routes/user.routes.js';
 import cors from 'cors';
 import paymentRouter from './routes/payment.routes.js';
 

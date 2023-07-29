@@ -1,5 +1,5 @@
-import Room from "../models/room.model";
-import Hotel from "../models/hotel.model";
+import Room from "../models/room.model.js";
+import Hotel from "../models/hotel.model.js";
 
 // Create new rooms
 export const addRoom = async (req,res,next)=>{

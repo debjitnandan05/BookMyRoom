@@ -1,5 +1,5 @@
 import express from "express";
-import { checkout, paymentVerification } from "../controllers/payment.controller";
+import { checkout, paymentVerification } from "../controllers/payment.controller.js";
 import dotenv from "dotenv";
 dotenv.config();
 const paymentRouter = express.Router();

@@ -1,5 +1,5 @@
 import express from "express";
-import { addHotel,countByCity,deleteHotel,getAllHotel,getHotelById,getHotelRooms,updateHotel } from "../controllers/hotel.controller";
+import { addHotel,countByCity,deleteHotel,getAllHotel,getHotelById,getHotelRooms,updateHotel } from "../controllers/hotel.controller.js";
 const hotelRouter = express.Router();
 
 hotelRouter.post('/',addHotel);
