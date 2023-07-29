@@ -6,6 +6,7 @@ import roomRouter from './routes/room.routes';
 import cors from 'cors';
 import paymentRouter from './routes/payment.routes.js';
 
+
 export const app = express();
 
 
@@ -24,13 +25,14 @@ app.use('/api/payment',paymentRouter)
 
 // for handel error
 app.use((err, req, res, next) => {
-    const errorStatus = err.status || 500;
-    const errorMessage = err.message || "Something went wrong!";
-    return res.status(errorStatus).json({
-      success: false,
-      status: errorStatus,
-      message: errorMessage,
-      stack: err.stack,
-    });
+  const errorStatus = err.status || 500;
+  const errorMessage = err.message || "Something went wrong!";
+  return res.status(errorStatus).json({
+    success: false,
+    status: errorStatus,
+    message: errorMessage,
+    stack: err.stack,
   });
+});
+
 
