@@ -1,4 +1,4 @@
-import { instance } from "../server.js";
+import { instance } from "../app.js";
 import crypto from 'crypto';
 import dotenv from "dotenv";
 dotenv.config();
